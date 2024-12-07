@@ -34,4 +34,9 @@ public class FamilyPublicController {
         return familyService.getById(id);
     }
 
+    @PatchMapping("/{id}")
+    public Mono<Void> modifyStatus(@PathVariable String id, @RequestBody String state) {
+        return familyService.modifyStatus(id, state);
+    }
+
 }
