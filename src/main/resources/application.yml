@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: vg-ms-enrollment
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:1234@mariaenriqueta.f47y4yu.mongodb.net/?retryWrites=true&w=majority&appName=MariaEnriqueta
+      database: vg-ms-mariaenriqueta
+  microservices:
+    student:
+      url: https://elderly-thia-web-maria-enriqueta-1a7f32b4.koyeb.app/public/student/api/v1
+    attorney:
+      url: https://vg-ms-attorney-production.up.railway.app/public/attorney/api/v1
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api/enrollment
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+api:
+  version: /v1
